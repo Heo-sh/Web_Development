@@ -15,8 +15,8 @@ function createRequest(){
 		xhr = new XMLHttpRequest();
 }
 
-
-function sendRequest(url, param, callBack, method){
+					//목적지, 목적지로 보낼 파라미터, 보낸 파라미터를 어떤 결과로 처리해서 어디로 어떻게 돌아올거냐?: 돌아오는 함수, 전송방식("GET", "POST")
+function sendRequest(url, param, callBack, method){  
 	createRequest();//HTTP request생성
 
 	//전송타입 구분
@@ -45,6 +45,9 @@ function sendRequest(url, param, callBack, method){
 	//작업이 완료된 후 호출될 콜백메서드 지정
 	xhr.onreadystatechange = callBack;
 	
+	//동기화 시에서 callback메서드가 필요 없다.
+	
+	//send(): 데이터 교환을 요청하는 함수
 	xhr.send(httpMethod == 'POST'?httpParam:null);
 }
 
