@@ -1,0 +1,28 @@
+<%@page import="vo.Person"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+<%
+	Person vo = new Person();
+	
+	vo.setName("홍길동");
+	vo.setAge(20);
+	
+	request.setAttribute("vo", vo);
+%>
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<!-- 
+		${vo.name}: vo 객체에 있는 getName()메서드를 호출해준다. 
+					-> 따라서 vo에 반드시 getter가 생성되어 있어야 한다.
+		-->
+		이름: ${vo.name}<br>
+		나이: ${vo.age}<br>
+	</body>
+</html>

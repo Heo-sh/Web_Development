@@ -1,0 +1,37 @@
+<%@page import="vo.SungjukVO"%>
+<%@page import="java.util.List"%>
+<%@page import="dao.SungjukDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	SungjukDAO sdao= SungjukDAO.getInstance();
+	List<SungjukVO> list = sdao.selectList(); 
+%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+<body>
+	<table>
+		<tr>
+			<th>No</th>
+			<th>이름</th>
+			<th>국어</th>
+			<th>수학</th>
+			<th>영어</th>
+		</tr>
+		<% for (int i = 0; i < list.size(); i++) { 
+					SungjukVO svo = list.get(i);
+		%>
+		<tr>
+			<td><%= svo.getNo() %></td>
+			<td><%= svo.getName() %></td>
+			<td><%= svo.getKor() %></td>
+			<td><%= svo.getMat() %></td>
+			<td><%= svo.getEng() %></td>
+		</tr>
+	</table>
+</body>
+</html>

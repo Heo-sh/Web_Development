@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="EUC-KR">
+		<title>Insert title here</title>
+	</head>
+	<body>
+		<form>
+			<table border="1">
+				<caption>학생 정보를 입력하세요</caption>
+				<tr>
+					<th>이름</th>
+					<th>
+						<input
+							name="name"
+						>
+					</th>
+					<th>국어</th>
+					<th>
+						<input
+							name="kor"
+						>
+					</th>
+					<th>영어</th>
+					<th>
+						<input
+							name="eng"
+						>
+					</th>
+					<th>수학</th>
+					<th>
+						<input
+							name="mat"
+						>
+					</th>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<input
+							type="button"
+							value="등록"
+							onclick="send(this.form)"
+						>
+						<input
+							type="button"
+							value="취소"
+							onclick="send(this.form)"
+						>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

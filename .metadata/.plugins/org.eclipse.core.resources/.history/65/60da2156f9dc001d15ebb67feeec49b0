@@ -1,0 +1,26 @@
+<%@page import="vo.SjVO"%>
+<%@page import="dao.SjDAO"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+<%
+	//register.jsp?name=%BB%EA%C5%B8&kor=100&eng=29&mat=53
+	String name = request.getParameter("name");
+	int kor = Integer.parseInt(request.getParameter("kor"));
+	int eng = Integer.parseInt(request.getParameter("eng"));
+	int mat = Integer.parseInt(request.getParameter("mat"));
+
+	SjVO vo = new SjVO();
+	vo.setName(name);
+	
+	SjDAO.getInstance().insert();
+%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>

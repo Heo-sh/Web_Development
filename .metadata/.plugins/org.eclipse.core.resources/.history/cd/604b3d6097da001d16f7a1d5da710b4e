@@ -1,0 +1,55 @@
+package dao;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import service.DBService;
+import vo.DeptVO;
+
+public class DeptDAO {
+//	쿼리문을 작성하고 데이터를 가져오는 역할을 하는 클래스
+//	DAO(Data Access Object)
+//	DTO(Data Transfer Object)
+	
+	// single-ton pattern: 
+	// 객체1개만생성해서 지속적으로 서비스하자
+	static DeptDAO single = null;
+
+	public static DeptDAO getInstance() {
+		//생성되지 않았으면 생성
+		if (single == null)
+			single = new DeptDAO();
+		//생성된 객체정보를 반환
+		return single;
+	}
+	
+	//모든 부서 조회
+	public List<DeptVO> selectList() {
+		
+		List<DeptVO> list = new ArrayList<DeptVO>();
+		
+		
+		//1.Connection정보를 얻어온다.
+		conn = DBService.getInstance().getConnection();
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,6 @@
+package dao;
+
+public class DeptDAO {
+//	쿼리문을 작성하고 데이터를 가져오는 역할을 하는 클래스
+	
+}
