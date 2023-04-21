@@ -23,7 +23,7 @@
 				//jsp에서는 java클래스 호출불가
 				//대신 Servlet 호출 가능
 				//f.action = "~.jsp";
-				f.action = "upload.do";
+				f.action = "upload.do"; //upload.do라는 별칭을 가진 servlet클래스
 				f.submit();
 			}
 		</script>

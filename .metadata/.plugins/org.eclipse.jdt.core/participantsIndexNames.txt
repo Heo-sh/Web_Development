@@ -3,6 +3,8 @@ D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\22
 \Ex_0420_FileUpload\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2357388458.index
 \Ex_0420_Ajax\src
+D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2289880684.index
+\Ex_0421_PhotoGallery\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3304611096.index
 \Ex_0414_Template\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2001499103.index

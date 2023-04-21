@@ -1,5 +1,0 @@
-package service;
-
-public class DBService {
-//	DB접속을 위한 코드를 위한 class
-}

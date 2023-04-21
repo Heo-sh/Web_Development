@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -33,8 +34,18 @@ public class FileUploadAction extends HttpServlet {
 		request.setCharacterEncoding("utf-8");
 		
 		//파일 업로드
-		String path = "c:/upload";
-		int max_size = 1024 * 1024 * 100; //100mb -> 크기를 제한할 수 있다.
+		String web_path = "/upload/";
+		
+		//현재 프로젝트에 대한 정보를 관리하는 클래스
+		ServletContext application = request.getServletContext();
+		
+		//web상의 상대경로에서 절대경로로 변환
+		String path = application.getRealPath(web_path);
+		
+		//현재 프로젝트의 절대경로
+		System.out.println(path);
+		
+		int max_size = 1024 * 1024 * 100; //100mb -> 최대 크기(용량)를 제한할 수 있다.
 		
 		//파일을 포함한 파라미터를 수신하기 위한 객체
 		MultipartRequest mr = new MultipartRequest(request, //request정보를 위임

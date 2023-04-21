@@ -13,10 +13,11 @@ Ajax(Asynchronous JavaScript and XML)
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
 		<!--  
-		js/httpRequest.js를 위한 script라서
-		새로운 javascript코드를 쓰려면
-		다른 script태그를 써야 한다.
-		아무 것도 작성하면 안된다.
+		- js/httpRequest.js를 위한 script라서
+		   새로운 javascript코드를 쓰려면
+		   다른 script태그를 써야 한다.
+		   아무 것도 작성하면 안된다.
+		- 꼭  src로 설정해야 한다. type No!!!
 		-->
 		<script src="js/httpRequest.js"></script>
 		<script type="text/javascript">
