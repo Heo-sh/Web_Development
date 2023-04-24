@@ -1,6 +1,0 @@
-package vo;
-
-public class SungjukVO {
-	private int no, kor, eng, mat;
-	private String name;
-}

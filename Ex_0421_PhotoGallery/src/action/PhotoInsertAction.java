@@ -29,6 +29,8 @@ public class PhotoInsertAction extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// insert.do?title=aaaa&pwd=1111&photo=$#%^#^
 		
+		request.setCharacterEncoding("utf-8");
+		
 		//절대경로 가져오기
 		String web_path = "/upload"; //같은 이름이더라도 다른 프로젝트라면 절대경로의 위치도 다르다.
 		ServletContext application = request.getServletContext();
@@ -54,9 +56,12 @@ public class PhotoInsertAction extends HttpServlet {
 		}
 		
 		//파일형식 이외의 일반 파라미터 수신하기
-		String title = request.getParameter("title");
-		String pwd = request.getParameter("pwd");
+		String title = mr.getParameter("title");
+		String pwd = mr.getParameter("pwd");
 		String ip = request.getRemoteAddr(); //ip얻어오기
+		
+		//파라미터가 잘 넘어오는 지 확인하는 법
+		//System.out.println("제목: " + title);
 		
 		PhotoVO vo = new PhotoVO();
 		vo.setTitle(title);

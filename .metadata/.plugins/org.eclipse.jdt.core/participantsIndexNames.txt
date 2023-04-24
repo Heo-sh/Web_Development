@@ -23,3 +23,5 @@ D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\16
 \Ex_0417_sungjuk\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2743705829.index
 \Ex_0412\src
+D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\282419737.index
+\Ex_0424_idCheck\src

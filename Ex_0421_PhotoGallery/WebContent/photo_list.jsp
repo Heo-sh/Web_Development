@@ -8,6 +8,43 @@
 		<title>Insert title here</title>
 		<link rel="stylesheet" href="css/photo.css">
 		<script src="js/httpRequest.js"></script>
+		<script type="text/javascript">
+			function del(f) {
+				var idx = f.idx.value;
+				//alert(idx);
+				//var filename = f.filename.value;
+				
+				if (!confirm("삭제하시겠습니까?")) {
+					return;
+				}
+				
+				//삭제를 원하는 idx를 서버로 전송
+				var url = "photo_del.do";
+				var param = "idx=" + idx + "&filename=" + f.filename.value;
+				
+				//AJAX로 보내기
+				sendRequest(url, param, finRes, "POST");				
+			}
+			
+			function finRes() {
+				if (xhr.readyState == 4 && xhr.status == 200) {
+					//Servlet으로부터 도착한 데이터 읽어오기
+					var data = xhr.responseText;
+					
+					//넘겨받은 데이터는 ""로 묶여진 문자열 구조로 인식하기 때문에
+					//JSON형식으로 변경해줘야 한다.
+					var json = eval(data);
+					
+					if (json[0].param == 'yes') {
+						alert("삭제 성공");
+					} else {
+						alert("삭제 실패");
+					}
+					
+					location.href = "list.do";
+				}
+			}
+		</script>
 	</head>
 	<body>
 		<div id="main_box">
@@ -29,11 +66,17 @@
 			<div id="photo_box">
 				<c:forEach var="vo" items="${list}">
 					<div class="photo_type">
+						<!-- 절대경로에 저장하여도 상대경로에는 보이진 않지만 조회는 가능하다. -->
 						<img src="upload/${vo.filename}">
-						<div class="title">${vo.title}</div>
-						<div>
-							<input type="button" value="삭제">
-						</div>
+						<div class="title">제목: ${vo.title}</div>
+						<!-- 전체를 form태그로 묶는 것보다는 보낼 데이터만 묶는 것이 좋다. -->
+						<form>
+							<input type="hidden" name="idx" value="${vo.idx}">
+							<input type="hidden" name="filename" value="${vo.filename}">
+							<div>
+								<input type="button" value="삭제" onclick="del(this.form)">
+							</div>
+						</form>
 					</div>
 				</c:forEach>
 			</div>

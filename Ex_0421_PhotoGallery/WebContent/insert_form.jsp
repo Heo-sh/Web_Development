@@ -24,7 +24,7 @@
 					return;
 				}
 				
-				f.submit();
+				f.submit(); //insert.do를 가지고 화면을 전환
 			}
 		</script>
 	</head>
