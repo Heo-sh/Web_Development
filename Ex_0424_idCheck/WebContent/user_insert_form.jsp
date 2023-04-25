@@ -7,8 +7,8 @@
 		<title>Insert title here</title>
 		<script src="js/httpRequest.js"></script>
 		<script type="text/javascript">
+			//아이디 중복체크 여부 => true or false 2가지 밖에 없다.
 			var b_idCheck = false;
-			
 		
 			function send(f) {
 				var id = f.id.value.trim();
@@ -28,7 +28,7 @@
 					return;
 				}
 				
-	 			if (!b_idcheck) {
+	 			if (!b_idCheck) {
 					alert("아이디 중복체크하세요");
 					return;
 				} 
@@ -58,9 +58,26 @@
 			
 			function resultFn() {
 				if(xhr.readyState == 4 && xhr.status == 200){
+					//"[{'res' : '%s'}]"
+					var data = xhr.responseText;
 					
+					//문자열로 넘어온 JSON배열을 데이터로 변환
+					var json = eval(data);
+					
+					if (json[0].res == 'no') {
+						alert("이미 사용중인 id입니다.");
+						return;
+						//alert으로 알려주는 것도 있지만 다른 변화를 줄 수도 있다. 가능성은 무한함
+					} else {
+						alert("사용 가능한 id입니다.");
+						b_idCheck = true; //true로 바꿔줘야지 send(f)메서드로 들어가서 반복하지 않는다.
+					}
 				}
-			}
+			} //resultFn()
+			
+			function che() {
+				b_idCheck = false;
+			}	
 		</script>
 	</head>
 	<body>
@@ -70,8 +87,9 @@
 				<tr>
 					<th>아이디</th>
 					<td>
-						<input name="id" id="id" type="text">
-						<input type="button" value="중복체크">
+						<!-- onchange속성: input태그의 포커스가 벗어났을 때(즉, 입력이 끝났을 때) 이벤트 발생 -->
+						<input name="id" id="id" onchange="che()">
+						<input type="button" value="중복체크" onclick="check_id()">
 					</td>
 				</tr>
 				<tr>

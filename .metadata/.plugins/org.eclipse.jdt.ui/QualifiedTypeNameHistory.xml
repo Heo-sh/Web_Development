@@ -19,6 +19,8 @@
     <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="dao.UserDAO"/>
     <fullyQualifiedTypeName name="vo.UserVO"/>
+    <fullyQualifiedTypeName name="dao.UserDAO"/>
+    <fullyQualifiedTypeName name="javax.websocket.SendResult"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 </qualifiedTypeNameHistroy>

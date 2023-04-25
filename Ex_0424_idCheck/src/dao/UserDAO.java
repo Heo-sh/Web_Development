@@ -29,7 +29,7 @@ public class UserDAO {
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		String sql = "select * from myUser order by idx desc";
+		String sql = "select * from myUser order by idx";
 
 		try {
 			//1.Connection얻어온다
@@ -71,7 +71,7 @@ public class UserDAO {
 		}
 
 		return list;
-	}
+	} //selectList
 	
 	//추가하기
 	public int insert(UserVO vo) {
@@ -94,6 +94,100 @@ public class UserDAO {
 			pstmt.setString(2, vo.getId());
 			pstmt.setString(3, vo.getPwd());
 
+			//4.DB로 전송(res:처리된행수)
+			res = pstmt.executeUpdate();
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return res;
+	} //insert
+	
+	//ID중복체크
+	public UserVO selectOne(String id) {
+
+		UserVO vo = null;
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		String sql = "select * from myUser where id=?";
+
+		try {
+			//1.Connection얻어온다
+			conn = DBService.getInstance().getConnection();
+			//2.명령처리객체정보를 얻어오기
+			pstmt = conn.prepareStatement(sql);
+
+			//3.pstmt parameter 설정
+			pstmt.setString(1, id);
+			
+			//4.결과행 처리객체 얻어오기
+			rs = pstmt.executeQuery();
+
+			if (rs.next()) {
+				vo = new UserVO();
+				//현재레코드값=>Vo저장
+				//이미 가입된 사람의 정보를 얻을 수 있다.
+				//vo.setIdx(rs.getInt("idx"));
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		} finally {
+
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		//vo = null: 회원가입이 가능한 상태
+		//vo != null: 회원가입이 불가능한 상태 -> id중복
+		return vo;
+		//id가 조회 가능하면 null은 아니다.
+		//id가 조회 불가면 null이 넘어간다.
+	}
+	
+	//삭제하기
+	public int delete(int idx) {
+		// TODO Auto-generated method stub
+		int res = 0;
+
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+
+		String sql = "delete from myUser where idx=?";
+
+		try {
+			//1.Connection획득
+			conn = DBService.getInstance().getConnection();
+			//2.명령처리객체 획득
+			pstmt = conn.prepareStatement(sql);
+
+			//3.pstmt parameter 채우기
+			pstmt.setInt(1, idx);
+			
 			//4.DB로 전송(res:처리된행수)
 			res = pstmt.executeUpdate();
 
