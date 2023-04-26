@@ -12,6 +12,7 @@
 		- 외부파일의 내용을 포함하는 태그
 		-->
 		<jsp:include page="check_login.jsp"/>
-		메인페이지	
+		메인페이지<br>
+		${vo.name}님 로그인을 환영합니다. <input type=button value="로그아웃" onclick="location.href='logout.do'">	
 	</body>
 </html>

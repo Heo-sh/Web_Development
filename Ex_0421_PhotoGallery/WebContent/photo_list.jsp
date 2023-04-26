@@ -11,8 +11,19 @@
 		<script type="text/javascript">
 			function del(f) {
 				var idx = f.idx.value;
+				var pwd = f.pwd.value.trim(); //원본 비밀번호
+				var pwd2 = f.pwd2.value.trim(); //입력한 비밀번호
 				//alert(idx);
 				//var filename = f.filename.value;
+				
+				if (pwd2 == null) {
+					alert("입력하라");
+				}
+				
+				if (pwd != pwd2) {
+					alert("비밀번호 불일치");
+					return;
+				}
 				
 				if (!confirm("삭제하시겠습니까?")) {
 					return;
@@ -44,6 +55,11 @@
 					location.href = "list.do";
 				}
 			}
+			
+			function download(fn) {
+				
+				location.href = "FileDownload.do?dir=/upload/&filename=" + fn;
+			}
 		</script>
 	</head>
 	<body>
@@ -73,7 +89,10 @@
 						<form>
 							<input type="hidden" name="idx" value="${vo.idx}">
 							<input type="hidden" name="filename" value="${vo.filename}">
-							<div>
+							<input type="hidden" name="pwd" value="${vo.pwd}">
+							<div align="center">
+								<input type="password" name="pwd2" size="5">
+								<input type="button" value="down" onclick="download('${vo.filename}')">
 								<input type="button" value="삭제" onclick="del(this.form)">
 							</div>
 						</form>
