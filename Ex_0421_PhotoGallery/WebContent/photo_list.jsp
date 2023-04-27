@@ -16,8 +16,9 @@
 				//alert(idx);
 				//var filename = f.filename.value;
 				
-				if (pwd2 == null) {
+				if (pwd2 == '') {
 					alert("입력하라");
+					return;
 				}
 				
 				if (pwd != pwd2) {

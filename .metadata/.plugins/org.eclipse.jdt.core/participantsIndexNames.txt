@@ -5,6 +5,8 @@ D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\23
 \Ex_0420_Ajax\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2289880684.index
 \Ex_0421_PhotoGallery\src
+D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2378800241.index
+\Ex_0426_Mybatis\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4273167170.index
 \Ex_0425_Cookie_Session\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3304611096.index
