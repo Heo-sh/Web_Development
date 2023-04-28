@@ -27,12 +27,12 @@
     <fullyQualifiedTypeName name="dao.DeptDAO"/>
     <fullyQualifiedTypeName name="vo.DeptVO"/>
     <fullyQualifiedTypeName name="dao.SawonDAO"/>
-    <fullyQualifiedTypeName name="vo.SawonVO"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
     <fullyQualifiedTypeName name="service.MybatisConnector"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
     <fullyQualifiedTypeName name="dao.GogekDAO"/>
+    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
+    <fullyQualifiedTypeName name="vo.SawonVO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="vo.GogekVO"/>
-    <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
 </qualifiedTypeNameHistroy>

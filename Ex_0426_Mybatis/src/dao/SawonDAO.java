@@ -28,6 +28,7 @@ public class SawonDAO {
 		factory = MybatisConnector.getInstance().getFactory();
 	}
 	
+	//전체 사원 조회
 	public List<SawonVO> select() {
 		SqlSession sqlSession = factory.openSession();	
 		
@@ -38,4 +39,36 @@ public class SawonDAO {
 		
 		return list;
 	}
+	
+	//특정 부서 사원 조회
+	public List<SawonVO> select(int deptno) {
+		
+		//1.처리객체 가져오기
+		SqlSession sqlSession = factory.openSession();
+		
+		//2.처리객체를 통해 쿼리작업 수행
+		List<SawonVO> list = sqlSession.selectList("s.sawon_list_no", deptno); //파라미터는 하나밖에 가져갈 수 없음
+		
+		sqlSession.close();
+		
+		return list;
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

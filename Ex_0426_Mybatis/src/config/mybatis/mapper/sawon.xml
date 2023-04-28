@@ -11,6 +11,16 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	select * from sawon 
 </select> 
 
+<!-- 
+변수를 받을 parameterType속성을 줘야 한다.
+parameterType은 String, 기본자료형을 제외한 나머지 모든 클래스 타입에 대해서는 반드시 패키지명을 함께 입력해줘야 한다.
+유일하게 String만 패키지를 안써줘도 됨
+그리고, ${}가 아닌 #{}이다.	
+ -->
+<select id="sawon_list_no" resultType="vo.SawonVO" parameterType="int"> 
+	select * from sawon where deptno=#{deptno}
+</select>
+
  
 
 </mapper>

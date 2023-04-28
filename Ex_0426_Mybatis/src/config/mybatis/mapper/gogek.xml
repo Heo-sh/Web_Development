@@ -10,8 +10,17 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <select id="gogek_list" resultType="vo.GogekVO">
 	select * from gogek 
 </select> 
-
- 
+	<!-- parameterType은 String, 기본자료형을 제외한 나머지 모든 클래스 타입에 대해서는 반드시 패키지명을 함께 입력해줘야 한다. -->
+	<!-- 유일하게 String만 패키지를 안써줘도 됨 -->
+	
+	<!--  
+	'%'|| #{ my_param } ||'%’
+	'%' + #{ 파라미터로 받을 임의의 이름 } + '%’
+	쿼리문은 +대신 ||을 사용하여 문자열을 결합한다.	
+	-->
+<select id="gogek_list_s" resultType="vo.GogekVO" parameterType="String">
+	select * from gogek where goaddr like '%'||#{search}||'%'
+</select> 
 
 </mapper>
 

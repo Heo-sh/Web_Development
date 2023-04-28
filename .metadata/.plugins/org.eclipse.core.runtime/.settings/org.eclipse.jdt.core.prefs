@@ -1,11 +1,11 @@
 eclipse.preferences.version=1
 org.eclipse.jdt.core.builder.resourceCopyExclusionFilter=
-org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=C\:/Users/SAMSUNG/OneDrive/\uBC14\uD0D5 \uD654\uBA74/web1500_hsh/jsp/util/eclipse-jee-2020-03-R-incubation-win32-x86_64/eclipse/
+org.eclipse.jdt.core.classpathVariable.ECLIPSE_HOME=D\:/Web15_hsh/4.jsp/util/eclipse-jee-2020-03-R-incubation-win32-x86_64/eclipse/
 org.eclipse.jdt.core.classpathVariable.JRE_LIB=C\:/Program Files/Java/jdk-11.0.16.1/lib/jrt-fs.jar
 org.eclipse.jdt.core.classpathVariable.JRE_SRC=C\:/Program Files/Java/jdk-11.0.16.1/lib/src.zip
 org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
-org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=C\:/Users/SAMSUNG/OneDrive/\uBC14\uD0D5 \uD654\uBA74/web1500_hsh/jsp/util/eclipse-jee-2020-03-R-incubation-win32-x86_64/eclipse/plugins/org.junit_4.13.0.v20200204-1500.jar
-org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/SAMSUNG/.m2/repository
+org.eclipse.jdt.core.classpathVariable.JUNIT_HOME=D\:/Web15_hsh/4.jsp/util/eclipse-jee-2020-03-R-incubation-win32-x86_64/eclipse/plugins/org.junit_4.13.0.v20200204-1500.jar
+org.eclipse.jdt.core.classpathVariable.M2_REPO=C\:/Users/Administrator/.m2/repository
 org.eclipse.jdt.core.codeComplete.argumentPrefixes=
 org.eclipse.jdt.core.codeComplete.argumentSuffixes=
 org.eclipse.jdt.core.codeComplete.fieldPrefixes=

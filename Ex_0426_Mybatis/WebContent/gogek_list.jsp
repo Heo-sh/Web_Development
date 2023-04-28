@@ -6,8 +6,21 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Insert title here</title>
+		<script type="text/javascript">
+			function search() {
+				var search = document.getElementById("search").value.trim();
+				
+				location.href = "gogek_list.do?search=" + search;
+				
+			}
+		</script>
 	</head>
 	<body>
+		<div align="center">
+			지역:
+			<input id="search" placeholder="검색어 입력">
+			<input type="button" value="검색" onclick="search()">
+		</div>
 		<table border="1" align="center">
 			<caption>:::고객 목록:::</caption>
 			<tr>

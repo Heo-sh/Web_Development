@@ -37,4 +37,15 @@ public class GogekDAO {
 		
 		return list;
 	}
+	
+	//지역 별 고객 조회
+	public List<GogekVO> select(String search) {
+		SqlSession sqlSession = factory.openSession();
+		
+		List<GogekVO> list = sqlSession.selectList("g.gogek_list_s", search);
+		
+		sqlSession.close();
+		
+		return list;
+	}
 }

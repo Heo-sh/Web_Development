@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="c">
+<!-- 쿼리문을 태그로써 관리한다 -->
+
+<!-- 절대 ;를 쓰면 안된다. -->
+<!-- 패키지까지 같이 써줘야한다. -->
+<select id="ciga_list" resultType="vo.CigaVO">
+	select * from ciga 
+</select> 
+
+ 
+
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
