@@ -17,6 +17,8 @@ D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\35
 \Ex_0411\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\567320942.index
 \Ex_0419_EL\src
+D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\566125496.index
+\Ex_0502_board\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1614303697.index
 \Ex_0417_sungjuk\src
 D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2743705829.index

@@ -152,17 +152,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Ex_0426_Mybatis" path="/Ex_0426_Mybatis" reloadable="true" source="org.eclipse.jst.jee.server:Ex_0426_Mybatis">
-
-	<!-- 리소스(정보)들을 미리 준비해두고, DB에 연결해야 하는 상황이 올 때
-	찾아서 사용하는 구조를 JNDI(Java Naming Directory Interface) -->
-
-	<Resource auth="Container" driverClassName="oracle.jdbc.driver.OracleDriver" factory="org.apache.commons.dbcp.BasicDataSourceFactory" maxActive="10" maxIdle="10" maxWait="1" name="jdbc/oracle_test" password="1111" type="javax.sql.DataSource" url="jdbc:oracle:thin:@localhost:1521:xe" username="TEST_PM"/>
-      		
-      		<!-- maxWait : 1초동안 기다리고 접속 안되면 연결끊음 -1은 접속될때까지 무한대기
-      		     maxActive : 10명이 동시에 접속할 수 있도록 준비해두는것 -->
-
-</Context><Context docBase="D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Practice" path="/Practice" reloadable="true" source="org.eclipse.jst.jee.server:Practice">
+      <Context docBase="D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="D:\Web15_hsh\4.jsp\work\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\Ex_0502_board" path="/Ex_0502_board" reloadable="true" source="org.eclipse.jst.jee.server:Ex_0502_board">
 
 	<!-- 리소스(정보)들을 미리 준비해두고, DB에 연결해야 하는 상황이 올 때
 	찾아서 사용하는 구조를 JNDI(Java Naming Directory Interface) -->
