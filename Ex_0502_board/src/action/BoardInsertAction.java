@@ -36,7 +36,11 @@ public class BoardInsertAction extends HttpServlet {
 		vo.setPwd(pwd);
 		vo.setIp(ip);
 		
-		dao.BoardDAO.getInstance().insert(vo);
+		int res = dao.BoardDAO.getInstance().insert(vo);
+		
+		if (res > 0) {
+			response.sendRedirect("board_list.do");
+		}
 	}
 
 }

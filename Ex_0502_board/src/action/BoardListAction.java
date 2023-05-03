@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import dao.BoardDAO;
 import vo.BoardVO;
@@ -28,6 +29,10 @@ public class BoardListAction extends HttpServlet {
 		
 		//전체 게시글 조회
 		List<BoardVO> list = BoardDAO.getInstance().select();
+		
+		//조회 수를 위해 저장해뒀던 'show'라는 정보를 session에서 제거
+		HttpSession session = request.getSession();
+		request.getSession().removeAttribute("show");
 		
 		//바인딩
 		request.setAttribute("list", list);

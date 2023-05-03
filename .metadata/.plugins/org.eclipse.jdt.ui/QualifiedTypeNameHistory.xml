@@ -32,9 +32,9 @@
     <fullyQualifiedTypeName name="vo.GogekVO"/>
     <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSessionFactory"/>
     <fullyQualifiedTypeName name="service.MybatisConnector"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="vo.BoardVO"/>
     <fullyQualifiedTypeName name="dao.BoardDAO"/>
+    <fullyQualifiedTypeName name="vo.BoardVO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
 </qualifiedTypeNameHistroy>

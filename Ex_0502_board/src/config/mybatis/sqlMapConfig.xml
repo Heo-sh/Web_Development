@@ -3,7 +3,8 @@
 PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
-	<!-- 
+	<!--
+	typeAliases 
 	원하는 타입에 특정의 별명을 주는 속성 
 	별칭을 주면 매퍼에서 패키지 이름과 같이 쓰지 않고 별칭으로 쓸수 있다.
 	-->
