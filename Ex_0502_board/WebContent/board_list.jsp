@@ -37,16 +37,33 @@
 						<!-- 답글일 경우 들여쓰기 &nbsp; : 띄어쓰기 엔티티코드-->
 						<c:forEach begin="1" end="${vo.depth}">&nbsp;</c:forEach>
 						<c:if test="${vo.depth ne 0}">ㄴ</c:if>
-						<a href="view.do?idx=${vo.idx}">
-							<font color="black">
+						<!-- 삭제가 되지 않은 게시물 정상적으로 표시 -->
+						<c:if test="${vo.del_info ne -1}">						
+							<a href="view.do?idx=${vo.idx}">
+								<font color="black">
+									${vo.subject}							
+								</font>
+							</a>
+						</c:if>
+						<!-- 삭제가 된 게시물은 클릭을 못 하게 변경 -->
+						<c:if test="${vo.del_info eq -1}">						
+							<font color="gray">
 								${vo.subject}							
 							</font>
-						</a>
+						</c:if>
 					</td>
 					<td>${vo.name}</td>
-					<td>
-						${fn:split(vo.regdate, ' ')[0]}
-					</td>
+					<c:if test="${vo.del_info ne -1}">
+						<td>
+							${fn:split(vo.regdate, ' ')[0]}
+						</td>					
+					</c:if>
+					<!-- 삭제된 게시물은 날짜를 unknown으로 표시 -->
+					<c:if test="${vo.del_info eq -1}">
+						<td>
+							unknown
+						</td>					
+					</c:if>
 					<td align="center">${vo.readhit}</td>
 				</tr>
 			</c:forEach>

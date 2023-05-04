@@ -42,32 +42,25 @@ public class BoardReplyAction extends HttpServlet {
 		//기준 글의 step보다 큰 값들에 대해 +1 처리하기
 		int res = dao.update_step(base_vo);
 		
+		//댓글 객체
+		BoardVO vo = new BoardVO();
+		vo.setName(name);
+		vo.setSubject(subject);
+		vo.setContent(content);
+		vo.setPwd(pwd);
+		vo.setIp(ip);
 		
+		vo.setRef(base_vo.getRef());
+		vo.setStep(base_vo.getStep() + 1);
+		vo.setDepth(base_vo.getDepth() + 1);
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		//답글을 실제로 등록하기
+		int res1 = dao.reply(vo);
+		 
+		if(res1 > 0) {
+			response.sendRedirect("board_list.do");
+		} 
+
 	}
 
 }

@@ -1,5 +1,6 @@
 package dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -27,11 +28,21 @@ public class BoardDAO {
 		factory = MybatisConnector.getInstance().getFactory();
 	}
 	
-	//DB 조회
-	public List<BoardVO> select() {
+	//전체 게시글 조회
+//	public List<BoardVO> select() {
+//		SqlSession sqlSession = factory.openSession();
+//		
+//		List<BoardVO> list = sqlSession.selectList("b.board_list");
+//		
+//		sqlSession.close();
+//		
+//		return list;
+//	}
+	//페이지별 게시글 조회
+	public List<BoardVO> select(HashMap<String, Integer> map) {
 		SqlSession sqlSession = factory.openSession();
 		
-		List<BoardVO> list = sqlSession.selectList("b.board_list");
+		List<BoardVO> list = sqlSession.selectList("b.board_list", map);
 		
 		sqlSession.close();
 		
@@ -83,4 +94,45 @@ public class BoardDAO {
 		
 		return res;
 	}
+	
+	public int reply(BoardVO vo) {
+		SqlSession sqlSession = factory.openSession(true);
+		
+		int res = sqlSession.insert("b.board_reply", vo);
+		
+		sqlSession.close();
+		
+		return res;
+	}
+	
+	//게시글 삭제(된 것처럼 업데이트하기)
+	public int del_update(BoardVO vo) {
+		SqlSession sqlSession = factory.openSession(true);
+		
+		int res = sqlSession.update("b.del_update", vo);
+		
+		sqlSession.close();
+		
+		return res;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }	
