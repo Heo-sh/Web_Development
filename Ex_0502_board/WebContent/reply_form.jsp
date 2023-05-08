@@ -32,6 +32,7 @@
 		>
 			<!-- ref에 idx값을 넣어주기 위해서 hidden으로 받는다. -->
 			<input type="hidden" name="idx" value="${param.idx}"> 
+			<input type="hidden" name="page" value="${param.page}"> 
 			<table border="1">
 				<caption>:::답글 달기:::</caption>
 				<tr>

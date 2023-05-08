@@ -34,10 +34,11 @@
     <fullyQualifiedTypeName name="service.MybatisConnector"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
-    <fullyQualifiedTypeName name="dao.BoardDAO"/>
-    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
     <fullyQualifiedTypeName name="vo.BoardVO"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.session.SqlSession"/>
+    <fullyQualifiedTypeName name="dao.BoardDAO"/>
+    <fullyQualifiedTypeName name="util.Paging"/>
     <fullyQualifiedTypeName name="util.Common"/>
     <fullyQualifiedTypeName name="util.Common.Board"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

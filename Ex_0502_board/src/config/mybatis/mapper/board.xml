@@ -12,6 +12,11 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		where no between #{start} and #{end}
 	</select>
 	
+	<!-- 전체 게시물 개수 조회 -->
+	<select id="board_count" resultType="int">
+		select count(*) from board
+	</select>
+	
 	<!-- 원본글을 추가 -->
 	<insert id="board_insert" parameterType="board">
 		insert into board values(seq_board_idx.nextval,

@@ -18,7 +18,7 @@
 		</style>
 		<script type="text/javascript">
 			function reply() {
-				location.href = "reply_form.jsp?idx=" + ${vo.idx};
+				location.href = "reply_form.jsp?idx=${vo.idx}&page=${param.page}";
 			}
 			function del() {
 				if(!confirm("삭제하시겠습니까?")) {
@@ -52,7 +52,7 @@
 					
 					if (json[0].param == 'yes') {
 						alert('삭제 완료');
-						location.href = "board_list.do";
+						location.href = "board_list.do?page=${param.page}";
 					} else {
 						alert('삭제 실패');
 					}
@@ -92,7 +92,7 @@
 			<tr>
 				<td colspan="2">
 					<!-- 목록 보기 -->
-					<img src="img/btn_list.gif" onclick="location.href='board_list.do'">
+					<img src="img/btn_list.gif" onclick="location.href='board_list.do?page=${param.page}'">
 					<!-- 답글 달기 -->
 					<c:if test="${vo.depth lt 1}">
 						<img src="img/btn_reply.gif" onclick="reply();">					

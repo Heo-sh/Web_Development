@@ -49,6 +49,17 @@ public class BoardDAO {
 		return list;
 	}
 	
+	//전체 게시물 조회
+	public int getRowTotal() {
+		SqlSession sqlSession = factory.openSession();
+		
+		int count = sqlSession.selectOne("b.board_count");
+		
+		sqlSession.close();
+		
+		return count;
+	}
+	
 	//DB 추가
 	public int insert(BoardVO vo) {
 		SqlSession sqlSession = factory.openSession(true);

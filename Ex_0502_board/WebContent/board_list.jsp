@@ -39,7 +39,7 @@
 						<c:if test="${vo.depth ne 0}">ㄴ</c:if>
 						<!-- 삭제가 되지 않은 게시물 정상적으로 표시 -->
 						<c:if test="${vo.del_info ne -1}">						
-							<a href="view.do?idx=${vo.idx}">
+							<a href="view.do?idx=${vo.idx}&page=${param.page}">
 								<font color="black">
 									${vo.subject}							
 								</font>
@@ -69,7 +69,7 @@
 			</c:forEach>
 			<tr>
 				<td colspan="5" align="center">
-					◀ 1 2 3 ▶
+					${pageMenu}
 				</td>
 			</tr>
 			<tr>
